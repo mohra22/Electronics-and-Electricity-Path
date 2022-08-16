@@ -12,16 +12,16 @@
 
 # code:
 
->#include <Servo.h> //use the servo library to generate the PWM signal
+>1. #include <Servo.h> //use the servo library to generate the PWM signal
 Servo ESC; //name our servo object. In our case, it will be the name of ESC
-void setup()
+>2. void setup()
 {
-ESC.attach(9); //"attach" the ESC controller to pin 9 of the Arduino board
+>3. ESC.attach(9); //"attach" the ESC controller to pin 9 of the Arduino board
 }
-void loop()
+>4. void loop()
 {
-int throttle = analogRead(A0); //read voltage from the potentiometer output
-throttle = map(throttle, 0, 1023, 0, 180); //convert the values from the range 0-1023 from the ADC output into the range 0-180 because servomotors can only operate in the range 0-180
-ESC.write(throttle); //generate PWM signal with necessary filling ratio
+>5.  int throttle = analogRead(A0); //read voltage from the potentiometer output
+ >6. throttle = map(throttle, 0, 1023, 0, 180); //convert the values from the range 0-1023 from the ADC output into the range 0-180 because servomotors can only operate in the range 0-180
+>7.  ESC.write(throttle); //generate PWM signal with necessary filling ratio
 }
 
