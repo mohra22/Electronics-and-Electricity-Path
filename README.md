@@ -25,3 +25,5 @@ Servo ESC; //name our servo object. In our case, it will be the name of ESC
 >7.  ESC.write(throttle); //generate PWM signal with necessary filling ratio
 }
 
+# A video similar to a circuit and its operation:
+[youtube](https://youtu.be/1hvSoUx-sMs)
